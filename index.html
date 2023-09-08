@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global_News Site</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- bootstrap -->
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- bootstrap javascript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Merriweather:wght@300&family=Montserrat:wght@200&family=PT+Serif&family=Poppins:wght@300;400;500;600;800&family=Roboto:wght@500&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+    <!-- fontawesome icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="images/logo2.png" alt="company logo">
+            </a>
+            <div class="col mid-sect">
+                <div class="search-bar flex">
+                    <input id="search-text" type="text" class="news-input" placeholder="e.g. Science">
+                    <button id="search-button" class="search-button">Search</button>
+                </div>
+                <div class="row nav-links">
+                    <ul class="flex">
+                        <li class="hover-link nav-item" id="Sports" onclick="onNavItemClick('Sports')">Sports</li>
+                        <li class="hover-link nav-item" id="Cricket" onclick="onNavItemClick('Cricket')">Cricket</li>
+                        <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                        <li class="hover-link nav-item" id="Politics" onclick="onNavItemClick('Politics')">Politics</li>
+                        <li class="hover-link nav-item" id="Bollywood" onclick="onNavItemClick('Bollywood')">Bollywood</li>
+                    </ul>
+                </div>                
+            </div>
+            <div class="contact-link">
+                <a href="#contact-bar">Contact-us</a>
+            </div>
+        </div>
+    </nav>
+    
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">            
+        </div>
+    </main>
+    <!-- tempelate is used in-order to generate multiple dynamic cards fetched for each news item fetched from Api, tempelate disappears from dom -->
+    <template id="template-news-card">
+        <div class="col col-lg-4 col-md-4 col-sm-6 card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+            </div>
+        </div>
+    </template>
+
+    <div id="contact-bar" class="contact">
+        <div class="row">
+            <div class="col col-lg-12 col-md-12 col-sm-12">
+                <h3>Contact me!</h3>
+                <a href="https://twitter.com/ZeeNews" class="twitter"><i class="icon fab fa-twitter fa-3x"></i></a>
+                <a href="https://www.facebook.com/ZeeNews/"><i class="icon fab fa-facebook fa-3x"></i></a>
+                <a href="https://www.instagram.com/zeenews/"><i class="icon fab fa-instagram fa-3x"></i></a>
+                <h5>See you soon!!</h5>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

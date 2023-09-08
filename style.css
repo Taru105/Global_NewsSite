@@ -1,0 +1,257 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #e56767;
+    --secondary-text-color: #0d0f10;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-text-color);        
+    background: linear-gradient(180deg, rgb(253, 249, 249),rgb(216, 208, 208),rgb(249, 190, 190),rgb(247, 173, 146));
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+.main{
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+/* nav-bar */
+nav {
+    background:linear-gradient(black,rgb(44, 44, 44),rgb(65, 65, 65),rgb(101, 101, 101));
+    box-shadow: 0 0 4px #212121;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+}
+.contact-link a{
+    color: white;
+}
+.contact-link a:hover{
+    font-size: 1.25rem;
+    color: #e56767;
+}
+
+.main-nav {    
+    justify-content: space-between;
+    padding-block: 4.5px;
+}
+
+.company-logo img {
+    padding-top: 1.1rem;
+    width: 60px;
+}
+
+.nav-links ul {
+    gap: 16px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+
+.hover-link {
+    cursor: pointer;
+}
+
+.hover-link:hover {
+    color: rgb(255, 140, 0);
+}
+
+.hover-link:active {
+    color: rgb(250, 162, 61);
+}
+/* when any query like ipl, finance is clicked then it's col in nav changes to the below given color */
+.nav-item.active {
+    color: rgb(250, 41, 83);
+    font-weight: bold;
+}
+.mid-sect{
+    align-items: center;
+}
+
+.search-bar {
+    text-align: center;
+    margin-top: 0.3rem;
+    margin-bottom: 0.4rem;
+    height: 32px;
+    gap: 8px;
+}
+
+.news-input {
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 15.5px;
+    border: none solid #bbd0e2;
+    border-style: none;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button {
+    background: lightcoral;
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 15.5px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button:hover {
+    background: rgb(248, 160, 89);
+}
+
+main {
+    padding-block: 20px;
+    margin-top: 80px;
+}
+
+/* card components */
+.cards-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+}
+
+.card {
+    width: 340px;
+    min-height: 400px;
+    /* box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px; */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+    border-radius: 8.5px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    cursor: pointer;
+    scale: 1.025;
+    /* background-color: #797777; */
+    color: white;
+    background: linear-gradient(180deg,rgb(116, 116, 116),rgb(152, 152, 152));
+    box-shadow: 0px 72px 49px -51px rgba(252, 150, 86, 0.21);
+
+    /* box-shadow: 1px 1px 8px #fac991;
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+    transition: all 10 ease-out; */
+    .news-source{
+        color: white;
+    }
+}
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {    
+    padding: 12px;
+}
+.card-content .news-title{
+    font-family: "Segoe UI";
+}
+.card-content .news-desc{
+    font-family: "Segoe UI", "Ubuntu", "Helvetica Neue", sans-serif;
+}
+
+.news-source {
+    margin-block: 12px;
+    color: gray;
+    font-weight: 100;
+}
+
+/* contact */
+.contact{
+    text-align: center;
+    background: rgba(0,0,0,0.75) url(images/bg1.jpg);   
+    padding-left: 0;
+    padding-right: 0; 
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.contact .icon{
+    color: black;    
+}
+.contact .icon:hover{
+    color: white;
+    width: 3.2rem;
+}
+.contact h3,h5{
+    font-size: 1.2rem;
+}
+.contact h3{
+    color: white;    
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.7rem;
+}
+.contact h5{    
+    color: white;    
+    font-family: 'PT Serif', serif;
+    /* font-weight: lighter; */
+    padding-top: 0.7rem;
+    padding-bottom: 1rem
+}
+
+@media screen and (max-width:600px) {
+    .main-nav{
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+    .nav-links{
+        display: none;
+    }
+    .contact-link a{
+        font-size: 0.9rem;
+    }
+    .contact-link a{
+        font-size: 1rem;
+    }
+    .news-input{
+        width: 160px;
+    }
+}
+@media screen and (max-width:1200px) {
+    .main-nav{
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+}
